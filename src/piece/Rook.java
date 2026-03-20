@@ -1,0 +1,17 @@
+package piece;
+
+import chess.Color;
+import chess.Coordinates;
+
+import java.util.Set;
+
+public class Rook extends LongRangePiece implements IRook {
+    public Rook(Color color, Coordinates coordinates) {
+        super(color, coordinates);
+    }
+
+    @Override
+    protected Set<CoordinatesShift> getPieceMoves() {
+        return getRookMoves();
+    }
+}
